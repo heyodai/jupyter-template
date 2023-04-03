@@ -14,4 +14,5 @@ RUN pip install --trusted-host pypi.python.org -r requirements.txt
 EXPOSE 8888
 
 # Run jupyter when the container launches
-CMD ["jupyter", "notebook", "--ip='*'", "--port=8888", "--no-browser", "--allow-root"]
+# "--NotebookApp.allow_origin='*'" is needed to allow the notebook to be accessed from VSCode
+CMD ["jupyter", "notebook", "--ip='*'", "--port=8888", "--no-browser", "--allow-root", "--NotebookApp.allow_origin='*'"]
