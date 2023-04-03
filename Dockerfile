@@ -1,5 +1,5 @@
 # Use an official Python runtime as a parent image
-FROM python:3.9-slim-buster
+FROM jupyter/base-notebook:notebook-6.5.3
 
 # Set the working directory to /app
 WORKDIR /app
